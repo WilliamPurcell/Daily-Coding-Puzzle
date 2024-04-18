@@ -4,8 +4,7 @@ class Solution(object):
         :type height: List[int]
         :rtype: int
         """
-        if len(height)==2:
-            return min(height[0],height[1])
+
         left=0
         right = len(height)-1
         maxwater= abs(left-right)* min(height[left],height[right])
@@ -14,10 +13,10 @@ class Solution(object):
                 left +=1
             else :
                 right-=1
-            width=abs(left-right)
-            wallheight=min(height[left],height[right])
-            if maxwater<width*wallheight:
-                maxwater= width*wallheight
+            #width=abs(left-right)
+            #wallheight=min(height[left],height[right])
+            if maxwater<abs(left-right)*min(height[left],height[right]):
+                maxwater= abs(left-right)*min(height[left],height[right])
         return maxwater
 
         
