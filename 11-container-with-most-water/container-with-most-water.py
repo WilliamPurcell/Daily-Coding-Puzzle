@@ -13,10 +13,10 @@ class Solution(object):
                 left +=1
             else :
                 right-=1
-            #width=abs(left-right)
-            #wallheight=min(height[left],height[right])
-            if maxwater<abs(left-right)*min(height[left],height[right]):
-                maxwater= abs(left-right)*min(height[left],height[right])
+            width=abs(left-right)
+            wallheight=min(height[left],height[right])
+            if maxwater<width*wallheight:
+                maxwater= width*wallheight
         return maxwater
 
         
