@@ -4,6 +4,7 @@ class Solution(object):
         :type height: List[int]
         :rtype: int
         """
+
         left=0
         right = len(height)-1
         maxwater= abs(left-right)* min(height[left],height[right])
